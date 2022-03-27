@@ -1,6 +1,7 @@
 go 1.18
 
 use (
-	./challenge-1
 	./challenge-0
+	./challenge-1
+	./challenge-2
 )
