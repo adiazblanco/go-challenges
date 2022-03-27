@@ -12,7 +12,7 @@ import (
  * Reto #1
  * ¿ES UN ANAGRAMA?
  * Fecha publicación enunciado: 03/01/22
- * Fecha publicación resolución: 19/03/22
+ * Fecha publicación resolución: 27/03/22
  * Dificultad: MEDIA
  *
  * Enunciado: Escribe una función que reciba dos palabras (String) y retorne verdadero o falso (Boolean) según sean o no anagramas.
@@ -34,6 +34,9 @@ func anagram(a string, b string) bool {
 	b = strings.ToLower(b)
 
 	fmt.Println(a, "<->", b)
+
+	a = strings.ReplaceAll(a, " ", "")
+	b = strings.ReplaceAll(b, " ", "")
 
 	if a == b {
 		return false
