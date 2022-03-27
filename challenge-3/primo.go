@@ -21,6 +21,32 @@ import "fmt"
  *
  */
 
+func primo(value int) bool {
+	if value <= 1 {
+		return false
+	}
+
+	count := 0
+
+	for i := 1; i <= value; i++ {
+		if mod := value % i; mod == 0 {
+			count++
+		}
+
+		if count == 2 && i < value {
+			return false
+		}
+	}
+
+	return true
+}
+
 func main() {
 	fmt.Println("Primo?")
+
+	for i := 1; i <= 100; i++ {
+		if primo(i) {
+			fmt.Println(i, " es primo")
+		}
+	}
 }
